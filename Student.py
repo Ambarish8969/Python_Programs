@@ -17,7 +17,7 @@ class Student:
     @classmethod
     def getSchool(cls):
         print(f"School is : {cls.school}")
-
+    
     @staticmethod
     def getInfo():
         print("He is a Good Student.")
