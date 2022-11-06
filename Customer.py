@@ -4,7 +4,7 @@ class Customer:
         self.name=name
         self.id=id
         self.password=password
-
+    
     def displayDetails(self):
         print(self.name,self.id,self.password)
 
