@@ -6,10 +6,11 @@ class Father:
 class Son(Father):  # Father is inherited by Son
     
     def method2(self):
+        super().method1()
         print("Method 2 working")
 
-obj=Father()
-obj.method1()
+# obj=Father()
+# obj.method1()
 
 obj2=Son()  # Son can use both method1 and method2 because of Inheritance.
 obj2.method2()
