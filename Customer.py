@@ -10,5 +10,3 @@ class Customer:
 
 obj=Customer("Ambarish",4658,"ambarish@00")
 obj.displayDetails() 
-
-EDITED FROM GITHUB WEBSITE.
