@@ -9,4 +9,4 @@ class Customer:
         print(self.name,self.id,self.password)
 
 obj=Customer("Ambarish",4658,"ambarish@00")
-obj.displayDetails()
+obj.displayDetails() 
