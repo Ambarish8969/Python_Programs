@@ -17,7 +17,6 @@ class EmployeeRegistration:
 
 for i in range(2):
     name=input("Enter employee name : ")
-    
     phno=int(input("Enter employees phone-number : "))
     id=int(input("Enter employees id : "))
     exp=int(input("Enter experience : "))
