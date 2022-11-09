@@ -4,12 +4,12 @@ conn=sqlite3.connect("test.db")
 
 cur=conn.cursor()
 
-# cur.execute("drop table if exists Students")
-# cur.execute('create table Students(usn varchar(11),name varchar(50))')
-# cur.execute('insert into Students values ("2kd18ec004","ambarish")')
-# conn.commit()
+cur.execute("drop table if exists Students")
+cur.execute('create table Students(name varchar(11),phno number(10))')
+cur.execute('insert into Students values ("ambarish",9900408969)')
+conn.commit()
 
-cur.execute('select * from Students')
+cur.execute('select phno from Students')
 for row in cur:
-    print(row)
+    print(type(row[0]))
 conn.close()
