@@ -2,8 +2,8 @@ import sqlite3
 conn=sqlite3.connect('test.db')
 cur=conn.cursor()
 
-cur.execute("drop table if exists Employees")
-cur.execute('create table Employees(Name varchar(20),Phno number(10),id number(5),exp number(2))')
+# cur.execute("drop table if exists Employees")
+# cur.execute('create table Employees(Name varchar(20),Phno number(10),id number(5),exp number(2))')
 class EmployeeRegistration:
 
     def __init__(self,name,email_phno,eid,exp):
@@ -25,10 +25,11 @@ for i in range(2):
     # obj.getDetails()
 
     cur.execute(f"insert into Employees (Name,Phno,id,exp) values ('{name}','{phno}','{id}','{exp}')")
+    conn.commit()
 cur.execute('select * from Employees')
 for row in cur:
     print(row)
+cur.execute("select Phno from Employees where Name='Ambarish'")
+for row in cur:
+    print(row)
 conn.close()
-
-
-# cur.execute(“INSERT INTO Tracks (title, plays) VALUES ('Thunderstruck', 20)”)
